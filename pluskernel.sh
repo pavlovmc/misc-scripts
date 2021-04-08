@@ -72,9 +72,9 @@ inmock ()
 	rm -f etc/ld.so.conf.d/kernel-$oldv.conf
 	cp -a /etc/ld.so.conf.d/kernel-plus-$v.conf etc/ld.so.conf.d/
 	# - also enable the centosplus repo
-	sed -i 's/^\(enabled=\)0/\11/' etc/anaconda.repos.d/CentOS-centosplus.repo
+	sed -i 's/^\(enabled=\)0/\11/' etc/anaconda.repos.d/CentOS-Linux-Plus.repo
 	# - and get kernel only from plus
-	sed -i '/^enabled=/a excludepkgs=kernel,kernel-modules*' etc/anaconda.repos.d/CentOS-Base.repo
+	sed -i '/^enabled=/a excludepkgs=kernel,kernel-modules*' etc/anaconda.repos.d/CentOS-Linux-BaseOS.repo
 	cd ..
 	umount rootfs
 	rmdir rootfs
